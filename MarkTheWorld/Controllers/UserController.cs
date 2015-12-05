@@ -59,6 +59,39 @@ namespace MarkTheWorld.Controllers
             return View(user);
         }
 
+        [HttpPost]
+        public ActionResult Register (User user)
+        {
+            User u = db.Users.FirstOrDefault(p => p.username == user.username);
+            if (u != null)
+            {
+                return Json("Unsuccessful registration");
+            }
+            else
+            {
+                db.Users.Add(user);
+                db.SaveChanges();
+                return Json("Successful registration");
+            }
+        }
+
+        [HttpPost]
+        public ActionResult Login(User user)
+        {
+            User u = db.Users.FirstOrDefault(p => p.username == user.username);
+            if (u == null)
+            {
+                return Json("Unsuccessful login");
+            }
+            else
+            {
+                if(u.password == user.password)
+                return Json("Successful login");
+                return Json("Unsuccessful login");
+
+            }
+        }
+
         // GET: /Default1/Edit/5
         public ActionResult Edit(int? id)
         {
