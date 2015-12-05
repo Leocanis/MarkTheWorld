@@ -109,17 +109,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Context\DotContext.cs" />
+    <Compile Include="Context\DotUserContext.cs" />
     <Compile Include="Context\UserContext.cs" />
+    <Compile Include="Controllers\DotController.cs" />
+    <Compile Include="Controllers\DotUserController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Dot.cs" />
+    <Compile Include="Models\DotUser.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\Dot\Create.cshtml" />
+    <Content Include="Views\Dot\Delete.cshtml" />
+    <Content Include="Views\Dot\Details.cshtml" />
+    <Content Include="Views\Dot\Edit.cshtml" />
+    <Content Include="Views\Dot\Index.cshtml" />
+    <Content Include="Views\DotUser\Create.cshtml" />
+    <Content Include="Views\DotUser\Delete.cshtml" />
+    <Content Include="Views\DotUser\Details.cshtml" />
+    <Content Include="Views\DotUser\Edit.cshtml" />
+    <Content Include="Views\DotUser\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

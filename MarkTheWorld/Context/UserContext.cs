@@ -9,5 +9,6 @@ namespace MarkTheWorld.Context
     public class UserContext : DbContext
     {
         public DbSet<MarkTheWorld.Models.User> Users { get; set; }
+
     }
 }
